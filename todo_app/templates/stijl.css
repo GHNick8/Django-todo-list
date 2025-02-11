@@ -1,0 +1,9 @@
+.nav-item form {
+    display: flex;
+    align-items: center;  
+    margin: 0;  
+}
+.nav-item .btn-link {
+    text-decoration: none;
+    font-weight: normal; 
+}

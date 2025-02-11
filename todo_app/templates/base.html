@@ -23,14 +23,14 @@
                     <ul class="navbar-nav ms-auto">
                         {% if user.is_authenticated %}
                             <li class="nav-item"><a class="nav-link ms-2" href="{% url 'task_create' %}">Nieuwe Taak</a></li>
-                            <li class="nav-item ms-2">
+                            <li class="nav-item d-flex align-items-center ms-2">
                                 <form method="POST" action="{% url 'logout' %}" class="d-inline">
                                     {% csrf_token %}
                                     <button type="submit" class="btn btn-link nav-link text-white p-0">
                                         Uitloggen
                                     </button>
                                 </form>
-                            </li>
+                            </li>                            
                         {% else %}
                             <li class="nav-item"><a class="nav-link ms-2" href="{% url 'login' %}">Inloggen</a></li>
                             <li class="nav-item"><a class="nav-link ms-2" href="{% url 'register' %}">Registreren</a></li>
