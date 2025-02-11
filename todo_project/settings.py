@@ -11,12 +11,12 @@ load_dotenv()
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'your-default-secret-key')
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
-# Added debug to fix persistent issue 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '127.0.0.1,localhost').split(',')
-
-if DEBUG:
-    ALLOWED_HOSTS.append("localhost")
-    ALLOWED_HOSTS.append("127.0.0.1")
+# Hardcoding ALLOWED_HOSTS to fix persistent issue 
+ALLOWED_HOSTS = [
+    "django-todo-list-ce0s.onrender.com",  # Your Render domain (without https://)
+    "127.0.0.1",  # Local development
+    "localhost"
+]
 
 # Database Configuration 
 DATABASE_URL = os.getenv("DATABASE_URL")  
