@@ -1,1 +1,33 @@
+# Ignore Environment Variables
 .env
+
+# Ignore Database Files (For SQLite Users)
+db.sqlite3
+__pycache__/
+
+# Ignore Compiled Python Files
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore Virtual Environment (venv)
+venv/
+mijnvenv/
+.venv/
+
+# Ignore Migrations Cache (Optional, only if regenerating)
+**/migrations/__pycache__/
+**/migrations/*.pyc
+
+# Ignore Static & Media Files (If using Django collectstatic)
+staticfiles/
+media/
+
+# Ignore IDE & OS Files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Ignore Render & Deployment-Specific Files
+*.log
