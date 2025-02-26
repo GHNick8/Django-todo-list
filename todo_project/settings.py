@@ -14,9 +14,12 @@ DEBUG = os.getenv('DEBUG', 'False') == 'True'
 # Hardcoding ALLOWED_HOSTS to fix persistent issue 
 ALLOWED_HOSTS = [
     "django-todo-list-ce0s.onrender.com",  # Your Render domain (without https://)
+    "django-todo-list-production-4d22.up.railway.app",
     "127.0.0.1",  # Local development
     "localhost"
 ]
+
+CSRF_TRUSTED_ORIGINS = ["https://django-todo-list-production-4d22.up.railway.app"]
 
 # Database Configuration 
 DATABASE_URL = os.getenv("DATABASE_URL")  
