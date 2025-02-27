@@ -28,3 +28,4 @@ EXPOSE 8080
 # Start the Django application using Gunicorn
 CMD ["gunicorn", "todo_project.wsgi:application", "--bind", "0.0.0.0:8080"]
 
+
